@@ -53,10 +53,21 @@ const getWaiterOrder = (req,res)=>{
     })
 }
 
+const deleteWaiterOrder = (req,res)=>{
+  WaiterOrderModel.deleteOne({title:req.body.table, table: req.body.reason})
+        .then((resp)=>{
+          res.json(resp)
+        })
+        .catch((err)=>{
+          res.json(err)
+        })
+}
+
 module.exports = {
     addOrder,
     getOrders,
     requestWaiter,
     deleteOrder,
-    getWaiterOrder
+    getWaiterOrder,
+    deleteWaiterOrder
 }
