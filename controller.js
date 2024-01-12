@@ -43,9 +43,20 @@ const requestWaiter = (req,res)=>{
   })
 }
 
+const getWaiterOrder = (req,res)=>{
+  WaiterOrderModel.find()
+    .then((resp)=>{
+      res.json(resp)
+    })
+    .catch((err)=>{
+      res.json(err)
+    })
+}
+
 module.exports = {
     addOrder,
     getOrders,
     requestWaiter,
-    deleteOrder
+    deleteOrder,
+    getWaiterOrder
 }
