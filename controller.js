@@ -23,7 +23,7 @@ const getOrders = (req,res)=>{
 }
 
 const deleteOrder = (req,res)=>{
-  OrderModel.find({title:req.body.title, table: req.body.table})
+  OrderModel.deleteOne({title:req.body.title, table: req.body.table})
         .then((resp)=>{
           res.json(resp)
         })
