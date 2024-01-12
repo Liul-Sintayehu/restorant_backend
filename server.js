@@ -8,7 +8,7 @@ const app = express()
 app.use(cors())
 
 const url = 'mongodb://127.0.0.1/food_orders';
-const newUrl = 'mongodb+srv://liulsintayehu7:KJjTL4UEF0IDW0Jk@cluster0.j9gxzve.mongodb.net/?retryWrites=true&w=majority/food-ordering-app'
+const newUrl = 'mongodb+srv://liulsintayehu7:KJjTL4UEF0IDW0Jk@cluster0.j9gxzve.mongodb.net/food-ordering-app?retryWrites=true&w=majority'
 
 mongoose.connect(newUrl,{useNewUrlParser:true})
     .then((resp)=>{
