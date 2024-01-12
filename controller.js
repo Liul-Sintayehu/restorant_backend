@@ -8,7 +8,7 @@ const addOrder = (req,res)=>{
         res.json('order accepted')
       })
       .catch((err)=>{
-        res.json('error occured')
+        res.json(err)
       })
 }
 const getOrders = (req,res)=>{
@@ -17,7 +17,7 @@ const getOrders = (req,res)=>{
         res.json(resp)
       })
       .catch((err)=>{
-        res.json('error occured')
+        res.json(err)
       })
 }
 
