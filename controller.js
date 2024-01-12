@@ -54,7 +54,7 @@ const getWaiterOrder = (req,res)=>{
 }
 
 const deleteWaiterOrder = (req,res)=>{
-  WaiterOrderModel.deleteOne({title:req.body.table, table: req.body.reason})
+  WaiterOrderModel.deleteOne({table:req.body.table, reason: req.body.reason})
         .then((resp)=>{
           res.json(resp)
         })
